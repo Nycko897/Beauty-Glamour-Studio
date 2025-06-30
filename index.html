@@ -7,7 +7,7 @@
 <style>
   body {
     font-family: Arial, sans-serif;
-    background-color: #fefcf9;
+    background-color: #fcfbf9;
     color: #4a4a4a;
     padding: 20px;
     margin: 0;
@@ -28,28 +28,62 @@
     color: #6e6e6e;
   }
   main {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
   }
   section {
-    background: #faf9f7;
-    padding: 25px 30px;
-    border-radius: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
-  h2 {
+  section h2 {
     font-size: 2rem;
     color: #4a4a4a;
     border-bottom: 2px solid #eae8e5;
     padding-bottom: 5px;
     margin-bottom: 20px;
   }
-  p {
-    font-size: 1.1rem;
-    color: #555555;
+  /* Servicios en tarjetas */
+  .servicios-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .servicio-item {
+    background: #faf9f7;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    flex: 1 1 250px;
+    padding: 20px;
+    text-align: center;
+  }
+  .servicio-item img {
+    max-width: 80px;
     margin-bottom: 15px;
   }
-  button {
+  .servicio-item h3 {
+    margin-bottom: 10px;
+    color: #555555;
+  }
+  .servicio-item p {
+    font-size: 1rem;
+    color: #666666;
+  }
+  /* Formulario */
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555555;
+  }
+  form input, form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 1rem;
+  }
+  form button {
     background-color: #f6f5f3;
     color: #4a4a4a;
     border: none;
@@ -60,7 +94,7 @@
     box-shadow: 0 3px 6px rgba(246, 245, 243, 0.8);
     transition: background-color 0.3s ease;
   }
-  button:hover {
+  form button:hover {
     background-color: #eae9e7;
     box-shadow: 0 5px 10px rgba(234, 233, 231, 0.9);
   }
@@ -72,43 +106,90 @@
     border-top: 1px solid #e6e3de;
     margin-top: 40px;
   }
+  /* Responsive */
+  @media (max-width: 600px) {
+    .servicios-lista {
+      flex-direction: column;
+    }
+  }
 </style>
 </head>
 <body>
-  <header>
-    <h1>Beauty Glamour Studios</h1>
-    <p>Tu spa de confianza para belleza y relajación</p>
-  </header>
-  <main>
-    <section>
-      <h2>Bienvenida</h2>
-      <section>
-  <h2>Reserva tu cita</h2>
-  <form id="reservaForm">
-    <label for="nombre">Nombre:</label><br/>
-    <input type="text" id="nombre" name="nombre" required style="width:100%; padding:8px; margin-bottom:10px;" />
+<header>
+  <h1>Beauty Glamour Studios</h1>
+  <p>Tu spa de confianza para belleza y relajación</p>
+  <button onclick="alert('Próximamente podrás reservar aquí')" style="margin-top:20px; padding: 15px 30px; border-radius: 25px; border:none; background:#f6f5f3; cursor:pointer; box-shadow: 0 3px 6px rgba(246, 245, 243, 0.8); color:#4a4a4a;">Reserva tu cita</button>
+</header>
+<main>
 
-    <label for="email">Email:</label><br/>
-    <input type="email" id="email" name="email" required style="width:100%; padding:8px; margin-bottom:10px;" />
+  <section id="servicios">
+    <h2>Servicios</h2>
+    <div class="servicios-lista">
+      <div class="servicio-item">
+        <img src="https://img.icons8.com/ios-filled/100/000000/massage.png" alt="Masajes"/>
+        <h3>Masajes</h3>
+        <p>Relájate y libera tensiones con nuestros masajes profesionales.</p>
+      </div>
+      <div class="servicio-item">
+        <img src="https://img.icons8.com/ios-filled/100/000000/facial-treatment.png" alt="Faciales"/>
+        <h3>Faciales</h3>
+        <p>Tratamientos faciales para revitalizar y cuidar tu piel.</p>
+      </div>
+      <div class="servicio-item">
+        <img src="https://img.icons8.com/ios-filled/100/000000/nail-polish.png" alt="Manicura"/>
+        <h3>Manicura</h3>
+        <p>Embellece tus manos con nuestros servicios de manicura.</p>
+      </div>
+      <div class="servicio-item">
+        <img src="https://img.icons8.com/ios-filled/100/000000/pedicure.png" alt="Pedicura"/>
+        <h3>Pedicura</h3>
+        <p>Cuida tus pies y siéntete cómodo con nuestra pedicura profesional.</p>
+      </div>
+      <div class="servicio-item">
+        <img src="https://img.icons8.com/ios-filled/100/000000/hair-removal.png" alt="Depilación"/>
+        <h3>Depilación</h3>
+        <p>Elimina el vello no deseado con técnicas suaves y efectivas.</p>
+      </div>
+    </div>
+  </section>
 
-    <label for="fecha">Fecha de cita:</label><br/>
-    <input type="date" id="fecha" name="fecha" required style="width:100%; padding:8px; margin-bottom:10px;" />
+  <section id="reserva">
+    <h2>Reserva tu cita</h2>
+    <form id="reservaForm">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required />
 
-    <label for="servicio">Servicio:</label><br/>
-    <select id="servicio" name="servicio" required style="width:100%; padding:8px; margin-bottom:10px;">
-      <option value="">Selecciona un servicio</option>
-      <option value="Masajes">Masajes</option>
-      <option value="Faciales">Faciales</option>
-      <option value="Manicura">Manicura</option>
-      <option value="Pedicura">Pedicura</option>
-      <option value="Depilación">Depilación</option>
-    </select>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
 
-    <button type="submit" style="background-color:#f6f5f3; color:#4a4a4a; border:none; padding:12px 25px; border-radius:20px; cursor:pointer;">
-      Enviar reserva
-    </button>
-  </form>
-</section>
+      <label for="fecha">Fecha de cita:</label>
+      <input type="date" id="fecha" name="fecha" required />
+
+      <label for="servicio">Servicio:</label>
+      <select id="servicio" name="servicio" required>
+        <option value="">Selecciona un servicio</option>
+        <option value="Masajes">Masajes</option>
+        <option value="Faciales">Faciales</option>
+        <option value="Manicura">Manicura</option>
+        <option value="Pedicura">Pedicura</option>
+        <option value="Depilación">Depilación</option>
+      </select>
+
+      <button type="submit">Enviar reserva</button>
+    </form>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Email: contacto@beautyglamour.com</p>
+    <p>Teléfono: (123) 456-7890</p>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2025 Beauty Glamour Studios. Todos los derechos reservados.
+</footer>
 
 <script>
   const form = document.getElementById('reservaForm');
@@ -118,6 +199,5 @@
     form.reset();
   });
 </script>
-
-      <p>En Beauty Glamour Studios te ofrecemos tratamientos exclusivos para cuidar tu piel, cuerpo y mente. Relájate y disfruta de una experiencia única con nuestros profesionales.</p>
-      <button onclick="alert('Próximamente podrás reservar aquí')">Reserva tu cita
+</body>
+</html>
