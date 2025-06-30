@@ -1,118 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Beauty Glamour Studios</title>
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans&display=swap" rel="stylesheet" />
-  
-  <style>
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-    }
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background: #fcfbf9; /* blanco crema muy suave, casi blanco */
-      color: #4a4a4a;
-      line-height: 1.6;
-      padding: 20px;
-    }
-    header {
-      text-align: center;
-      padding: 40px 20px;
-      background: #f9f8f6; /* blanco crema muy claro */
-      border-radius: 8px;
-      margin-bottom: 40px;
-      font-family: 'Lora', serif;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-    header h1 {
-      font-size: 3rem;
-      color: #4a4a4a;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 1.2rem;
-      color: #6e6e6e;
-    }
-    main {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    section {
-      margin-bottom: 40px;
-      background: #faf9f7; /* crema muy muy clara */
-      padding: 25px 30px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-    h2 {
-      font-family: 'Lora', serif;
-      color: #4a4a4a;
-      margin-bottom: 20px;
-      font-size: 2rem;
-      border-bottom: 2px solid #eae8e5; /* muy claro */
-      padding-bottom: 5px;
-    }
-    p {
-      font-size: 1.1rem;
-      color: #555555;
-      margin-bottom: 15px;
-    }
-    button {
-      background-color: #f6f5f3; /* crema muy claro, casi blanco */
-      color: #4a4a4a;
-      border: none;
-      padding: 15px 30px;
-      font-size: 1.1rem;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      box-shadow: 0 3px 6px rgba(246, 245, 243, 0.8);
-    }
-    button:hover {
-      background-color: #eae9e7;
-      box-shadow: 0 5px 10px rgba(234, 233, 231, 0.9);
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #7a7a7a;
-      font-size: 0.9rem;
-      border-top: 1px solid #e6e3de;
-      margin-top: 40px;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Beauty Glamour Studios</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fefcf9;
+    color: #4a4a4a;
+    padding: 20px;
+    margin: 0;
+  }
+  header {
+    text-align: center;
+    padding: 40px 20px;
+    background: #f9f8f6;
+    border-radius: 8px;
+    margin-bottom: 40px;
+  }
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  header p {
+    font-size: 1.2rem;
+    color: #6e6e6e;
+  }
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  section {
+    background: #faf9f7;
+    padding: 25px 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+  }
+  h2 {
+    font-size: 2rem;
+    color: #4a4a4a;
+    border-bottom: 2px solid #eae8e5;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 1.1rem;
+    color: #555555;
+    margin-bottom: 15px;
+  }
+  button {
+    background-color: #f6f5f3;
+    color: #4a4a4a;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(246, 245, 243, 0.8);
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #eae9e7;
+    box-shadow: 0 5px 10px rgba(234, 233, 231, 0.9);
+  }
+  footer {
+    text-align: center;
+    padding: 20px;
+    color: #7a7a7a;
+    font-size: 0.9rem;
+    border-top: 1px solid #e6e3de;
+    margin-top: 40px;
+  }
+</style>
 </head>
 <body>
   <header>
     <h1>Beauty Glamour Studios</h1>
     <p>Tu spa de confianza para belleza y relajación</p>
   </header>
-  
   <main>
     <section>
       <h2>Bienvenida</h2>
       <p>En Beauty Glamour Studios te ofrecemos tratamientos exclusivos para cuidar tu piel, cuerpo y mente. Relájate y disfruta de una experiencia única con nuestros profesionales.</p>
-      <button onclick="alert('Próximamente podrás reservar aquí')">Reserva tu cita</button>
-    </section>
-    
-    <section>
-      <h2>Servicios</h2>
-      <p>Masajes, faciales, manicura, pedicura, depilación y mucho más. Todo con productos de alta calidad y un ambiente relajante.</p>
-    </section>
-    
-    <section>
-      <h2>Contacto</h2>
-      <p>Email: contacto@beautyglamour.com</p>
-      <p>Teléfono: (123) 456-7890</p>
-    </section>
-  </main>
-  
-  <footer>
-    &copy; 2025 Beauty Glamour Studios. Todos los derechos reservados.
-  </footer>
-</body>
-</html>
+      <button onclick="alert('Próximamente podrás reservar aquí')">Reserva tu cita
