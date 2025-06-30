@@ -82,5 +82,42 @@
   <main>
     <section>
       <h2>Bienvenida</h2>
+      <section>
+  <h2>Reserva tu cita</h2>
+  <form id="reservaForm">
+    <label for="nombre">Nombre:</label><br/>
+    <input type="text" id="nombre" name="nombre" required style="width:100%; padding:8px; margin-bottom:10px;" />
+
+    <label for="email">Email:</label><br/>
+    <input type="email" id="email" name="email" required style="width:100%; padding:8px; margin-bottom:10px;" />
+
+    <label for="fecha">Fecha de cita:</label><br/>
+    <input type="date" id="fecha" name="fecha" required style="width:100%; padding:8px; margin-bottom:10px;" />
+
+    <label for="servicio">Servicio:</label><br/>
+    <select id="servicio" name="servicio" required style="width:100%; padding:8px; margin-bottom:10px;">
+      <option value="">Selecciona un servicio</option>
+      <option value="Masajes">Masajes</option>
+      <option value="Faciales">Faciales</option>
+      <option value="Manicura">Manicura</option>
+      <option value="Pedicura">Pedicura</option>
+      <option value="Depilación">Depilación</option>
+    </select>
+
+    <button type="submit" style="background-color:#f6f5f3; color:#4a4a4a; border:none; padding:12px 25px; border-radius:20px; cursor:pointer;">
+      Enviar reserva
+    </button>
+  </form>
+</section>
+
+<script>
+  const form = document.getElementById('reservaForm');
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Gracias por reservar con Beauty Glamour Studios. Nos pondremos en contacto contigo pronto.');
+    form.reset();
+  });
+</script>
+
       <p>En Beauty Glamour Studios te ofrecemos tratamientos exclusivos para cuidar tu piel, cuerpo y mente. Relájate y disfruta de una experiencia única con nuestros profesionales.</p>
       <button onclick="alert('Próximamente podrás reservar aquí')">Reserva tu cita
